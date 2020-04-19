@@ -71,10 +71,14 @@ $('form').validate({
   },
 });
 // submit form
+const resultsDiv = document.createElement('div');
 function submitForm(event) {
   event.preventDefault();
+  while (resultsDiv.firstChild) {
+    resultsDiv.firstChild.remove();
+  }
+  // resultsDiv.innerHTML = '';
   const infos = event.target.elements;
-  const resultsDiv = document.createElement('div');
   resultsDiv.className = 'container z-depth-3';
   resultsDiv.style.padding = '2% 2%';
   for (let i = 0; i < infos.length; i += 1) {
