@@ -77,7 +77,6 @@ function submitForm(event) {
   while (resultsDiv.firstChild) {
     resultsDiv.firstChild.remove();
   }
-  // resultsDiv.innerHTML = '';
   const infos = event.target.elements;
   resultsDiv.className = 'container z-depth-3';
   resultsDiv.style.padding = '2% 2%';
