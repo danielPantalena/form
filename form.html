@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Exercises 6.2</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="materialize/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <!--Import internal CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="padding: 0 0 100px 0;">
+    <!-- Collapsible Navigator -->
+    <nav class="z-depth-3" style="padding: 0 4%; margin-bottom: 10px;">
+      <!-- Navigator for computers -->
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Forms</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="https://materializecss.com/" target="_blank"
+              >Materialize</a
+            >
+          </li>
+          <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+          <li>
+            <a href="https://danielpantalena.github.io" target="_blank"
+              ><i class="medium material-icons">contacts</i></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navigator for mobiles -->
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a href="https://materializecss.com/" target="_blank">Materialize</a>
+      </li>
+      <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+      <li>
+        <a href="https://danielpantalena.github.io" target="_blank"
+          ><i class="small material-icons">contacts</i></a
+        >
+      </li>
+    </ul>
+    <!-- form's container -->
+    <div class="row z-depth-3 container" style="padding: 2% 2%;">
+      <form id="form" class="col s12" style="color: #ee6e73;">
+        <h4>Personal Data</h4>
+        <!-- Name -->
+        <div class="row">
+          <!-- First Name -->
+          <div class="input-field col s6">
+            <input
+              class="validate"
+              id="first_name"
+              name="first_name"
+              type="text"
+            />
+            <label for="first_name">First Name</label>
+          </div>
+          <!-- Last Name -->
+          <div class="input-field col s6">
+            <input
+              class="validate"
+              id="last_name"
+              name="last_name"
+              type="text"
+            />
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <!-- Email and CPF -->
+        <div class="row">
+          <!-- Email -->
+          <div class="input-field col s6">
+            <input class="validate" id="email" name="email" type="email" />
+            <label for="email">Email</label>
+          </div>
+          <!-- CPF -->
+          <div class="input-field col s6">
+            <input
+              class="validate"
+              id="cpf"
+              name="CPF"
+              maxlength="11"
+              type="text"
+              pattern="\d{11}"
+            />
+            <label for="cpf">CPF</label>
+          </div>
+        </div>
+        <!-- Adress -->
+        <div class="row">
+          <div class="input-field col s12">
+            <input class="validate" id="adress" name="adress" type="text" />
+            <label for="adress">Adress</label>
+          </div>
+        </div>
+        <!-- City and State -->
+        <div class="row">
+          <!-- City -->
+          <div class="input-field col s6">
+            <input class="validate" id="city" name="city" type="text" />
+            <label for="city">City:</label>
+          </div>
+          <!-- State -->
+          <div class="input-field col s6">
+            <select name="state" id="state">
+              <option value="" disabled="disabled" selected>Select</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option
+              ><option value="AP">Amapá</option
+              ><option value="AM">Amazonas</option
+              ><option value="BA">Bahia</option
+              ><option value="CE">Ceará</option
+              ><option value="DF">Destrito Federal</option
+              ><option value="ES">Espirito Santo</option
+              ><option value="GO">Goiás</option
+              ><option value="MA">Maranhão</option
+              ><option value="MT">Mato Grosso</option
+              ><option value="MS">Mato Grosso do Sul</option
+              ><option value="MG">Minas Gerais</option
+              ><option value="PA">Pará</option
+              ><option value="PB">Paraíba</option
+              ><option value="PR">Paraná</option
+              ><option value="PE">Pernambuco</option
+              ><option value="PI">Piauí</option
+              ><option value="RJ">Rio de Janeiro</option
+              ><option value="RN">Rio Grande do Norte</option
+              ><option value="RS">Rio Grande do Sul</option
+              ><option value="RO">Rondônia</option
+              ><option value="RR">Roraima</option
+              ><option value="SC">Santa Catrina</option
+              ><option value="SP">São Paulo</option
+              ><option value="SE">Sergipe</option
+              ><option value="TO">Tocantis</option>
+            </select>
+          </div>
+        </div>
+        <!-- Home Radio -->
+        <p>Home:</p>
+        <p>
+          <label>
+            <input name="home" type="radio" value="house" required />
+            <span>House</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="home" type="radio" value="apartment" />
+            <span>Apartment</span>
+          </label>
+        </p>
+        <br />
+        <!-- Word Data -->
+        <h4>Work Data</h4>
+        <!-- Resume -->
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea
+              class="materialize-textarea validate"
+              cols="30"
+              id="cv"
+              maxlength="1000"
+              name="cv"
+              rows="10"
+            ></textarea>
+            <label for="cv">Resume: </label>
+          </div>
+        </div>
+        <!-- Job Title and Date -->
+        <div class="row">
+          <!-- Job Title -->
+          <div class="input-field col s6">
+            <input class="validate" name="jobTitle" type="text" />
+            <label for="cargo">Job Title: </label>
+          </div>
+          <!-- Date -->
+          <div class="input-field col s6">
+            <input type="text" name="date" class="datepicker" type="date" />
+            <label for="date">date:</label>
+          </div>
+        </div>
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <a id="clear-button" class="waves-effect waves-light btn">Clear</a>
+      </form>
+    </div>
+    <!--Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Import jQuery validate-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!--Import materialize.js-->
+    <script
+      type="text/javascript"
+      src="materialize/js/materialize.min.js"
+    ></script>
+    <!--Import internal js -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
