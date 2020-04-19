@@ -12,6 +12,7 @@ $(document).ready(function () {
 });
 // validation
 $('form').validate({
+  errorClass: 'invalid',
   rules: {
     first_name: {
       required: true,
@@ -71,31 +72,33 @@ $('form').validate({
   },
 });
 // submit form
-const resultsDiv = document.createElement('div');
 function submitForm(event) {
   event.preventDefault();
-  while (resultsDiv.firstChild) {
-    resultsDiv.firstChild.remove();
-  }
-  const infos = event.target.elements;
-  resultsDiv.className = 'container z-depth-3';
-  resultsDiv.style.padding = '2% 2%';
-  for (let i = 0; i < infos.length; i += 1) {
-    if (infos[i].name !== '' && infos[i].type !== 'submit') {
-      if (infos[i].type === 'radio') {
-        if (infos[i].checked) {
+  if ($('form').valid()) {
+    const resultsDiv = document.createElement('div');
+    const infos = event.target.elements;
+    resultsDiv.className = 'container z-depth-3';
+    resultsDiv.style.padding = '2% 2%';
+    for (let i = 0; i < infos.length; i += 1) {
+      if (infos[i].name !== '' && infos[i].type !== 'submit') {
+        if (infos[i].type === 'radio') {
+          if (infos[i].checked) {
+            let resultChild = document.createElement('P');
+            resultChild.innerHTML = `${infos[i].name}: ${infos[i].value} <br>`;
+            resultsDiv.appendChild(resultChild);
+          }
+        } else {
           let resultChild = document.createElement('P');
           resultChild.innerHTML = `${infos[i].name}: ${infos[i].value} <br>`;
           resultsDiv.appendChild(resultChild);
         }
-      } else {
-        let resultChild = document.createElement('P');
-        resultChild.innerHTML = `${infos[i].name}: ${infos[i].value} <br>`;
-        resultsDiv.appendChild(resultChild);
       }
     }
+    document.body.appendChild(resultsDiv);
+    document.getElementById('form-container').style.display = 'none';
+  } else {
+    return alert('Please, complete the form before submit')
   }
-  document.body.appendChild(resultsDiv);
 }
 
 window.onload = () => {
