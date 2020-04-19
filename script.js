@@ -94,12 +94,7 @@ function submitForm(event) {
   }
   document.body.appendChild(resultsDiv);
 }
-// clear form
-function clearForm() {
-  location.reload();
-}
 
 window.onload = () => {
   document.getElementById('form').addEventListener('submit', submitForm);
-  document.getElementById('clear-button').addEventListener('click', clearForm);
 };
