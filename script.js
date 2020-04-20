@@ -16,12 +16,11 @@ $('form').validate({
   rules: {
     first_name: {
       required: true,
-      minlength: 5,
       maxlength: 20,
     },
     last_name: {
       required: true,
-      minlength: 5,
+      maxlength: 20,
     },
     email: {
       required: true,
@@ -30,6 +29,7 @@ $('form').validate({
     },
     CPF: {
       required: true,
+      number: true,
       minlength: 11,
       maxlength: 11,
     },
@@ -68,6 +68,13 @@ $('form').validate({
       } else {
         error.insertAfter(element);
       }
+    } else {
+      let placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error);
+      } else {
+        error.insertBefore(element);
+      }
     }
   },
 });
@@ -97,7 +104,7 @@ function submitForm(event) {
     document.body.appendChild(resultsDiv);
     document.getElementById('form-container').style.display = 'none';
   } else {
-    return alert('Please, complete the form before submit')
+    return alert('Please, complete the form before submit');
   }
 }
 
