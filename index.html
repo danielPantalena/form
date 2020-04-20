@@ -59,7 +59,11 @@
       </li>
     </ul>
     <!-- form's container -->
-    <div id="form-container" class="row z-depth-3 container" style="padding: 2% 2%;">
+    <div
+      id="form-container"
+      class="row z-depth-3 container"
+      style="padding: 2% 2%;"
+    >
       <form id="form" class="col s12" style="color: #ee6e73;">
         <h4>Personal Data</h4>
         <!-- Name -->
@@ -179,28 +183,32 @@
           <div class="input-field col s12">
             <textarea
               class="materialize-textarea validate"
-              cols="30"
               id="cv"
               maxlength="1000"
               name="cv"
-              rows="10"
             ></textarea>
             <label for="cv">Resume: </label>
           </div>
         </div>
         <!-- Job Title and Date -->
-        <div class="row">
+        <div class="row" style="margin-top: 20px;">
           <!-- Job Title -->
           <div class="input-field col s6">
             <i class="material-icons prefix">assignment_ind</i>
-            <input class="validate" name="jobTitle" type="text" />
+            <input id="cargo" class="validate" name="job_title" type="text" />
             <label for="cargo">Job Title: </label>
           </div>
           <!-- Date -->
           <div class="input-field col s6">
             <i class="material-icons prefix">date_range</i>
-            <input type="text" name="date" class="datepicker" type="date" />
-            <label for="date">date:</label>
+            <input
+              id="date"
+              type="text"
+              name="date"
+              class="datepicker"
+              type="date"
+            />
+            <label for="date">Date:</label>
           </div>
         </div>
         <button

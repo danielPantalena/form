@@ -51,7 +51,7 @@ $('form').validate({
       required: true,
       maxlength: 1000,
     },
-    jobTitle: {
+    job_title: {
       required: true,
     },
     date: {
