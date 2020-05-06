@@ -14,13 +14,10 @@ $(document).ready(function () {
 $('form').validate({
   errorClass: 'invalid',
   rules: {
-    first_name: {
+    full_name: {
       required: true,
-      maxlength: 20,
-    },
-    last_name: {
-      required: true,
-      maxlength: 20,
+      maxlength: 5,
+      maxlength: 40,
     },
     email: {
       required: true,

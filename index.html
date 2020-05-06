@@ -22,12 +22,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body style="padding: 0 0 100px 0;">
+  <body>
     <!-- Collapsible Navigator -->
     <nav class="z-depth-3" style="padding: 0 4%; margin-bottom: 10px;">
       <!-- Navigator for computers -->
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Forms</a>
+        <a href="https://danielpantalena.github.io/form" class="brand-logo"
+          >Forms</a
+        >
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
@@ -40,7 +42,7 @@
           <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
           <li>
             <a href="https://danielpantalena.github.io" target="_blank"
-              ><i class="medium material-icons">contacts</i></a
+              >danielPantalena</a
             >
           </li>
         </ul>
@@ -54,7 +56,7 @@
       <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
       <li>
         <a href="https://danielpantalena.github.io" target="_blank"
-          ><i class="small material-icons">contacts</i></a
+          >danielPantalena</a
         >
       </li>
     </ul>
@@ -64,42 +66,31 @@
       class="row z-depth-3 container"
       style="padding: 2% 2%;"
     >
-      <form id="form" class="col s12" style="color: #ee6e73;">
+      <form id="form" style="color: #ee6e73;">
         <h4>Personal Data</h4>
-        <!-- Name -->
+        <!-- First Name -->
         <div class="row">
-          <!-- First Name -->
-          <div class="input-field col s6">
+          <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
             <input
               class="validate"
-              id="first_name"
-              name="first_name"
+              id="full_name"
+              name="full_name"
               type="text"
             />
-            <label for="first_name">First Name</label>
-          </div>
-          <!-- Last Name -->
-          <div class="input-field col s6">
-            <input
-              class="validate"
-              id="last_name"
-              name="last_name"
-              type="text"
-            />
-            <label for="last_name">Last Name</label>
+            <label for="full_name">Full Name</label>
           </div>
         </div>
         <!-- Email and CPF -->
         <div class="row">
           <!-- Email -->
-          <div class="input-field col s6">
+          <div class="input-field col s12 l6">
             <i class="material-icons prefix">email</i>
             <input class="validate" id="email" name="email" type="email" />
             <label for="email">Email</label>
           </div>
           <!-- CPF -->
-          <div class="input-field col s6">
+          <div class="input-field col s12 l6">
             <i class="material-icons prefix">featured_play_list</i>
             <input
               class="validate"
@@ -123,12 +114,12 @@
         <!-- City and State -->
         <div class="row">
           <!-- City -->
-          <div class="input-field col s6">
+          <div class="input-field col s12 l6">
             <input class="validate" id="city" name="city" type="text" />
             <label for="city">City:</label>
           </div>
           <!-- State -->
-          <div class="input-field col s6">
+          <div class="input-field col s12 l6">
             <select name="state" id="state">
               <option value="" disabled="disabled" selected>Select</option>
               <option value="AC">Acre</option>
@@ -193,13 +184,13 @@
         <!-- Job Title and Date -->
         <div class="row" style="margin-top: 20px;">
           <!-- Job Title -->
-          <div class="input-field col s6">
+          <div class="input-field col m12 l6">
             <i class="material-icons prefix">assignment_ind</i>
             <input id="cargo" class="validate" name="job_title" type="text" />
             <label for="cargo">Job Title: </label>
           </div>
           <!-- Date -->
-          <div class="input-field col s6">
+          <div class="input-field col m12 l6">
             <i class="material-icons prefix">date_range</i>
             <input
               id="date"
@@ -239,5 +230,8 @@
     ></script>
     <!--Import internal js -->
     <script type="text/javascript" src="script.js"></script>
+    <footer>
+      created by: <a href="danielpantalena.github.io">danielPantalena</a>
+    </footer>
   </body>
 </html>

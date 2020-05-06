@@ -1,3 +1,11 @@
+body {
+    padding-bottom: 5%;
+}
+
+button {
+    margin-bottom: 20px;
+}
+
 #clear-button {
     background-color: #ee6e73;
     margin-left: 50px;
@@ -20,4 +28,11 @@
 .input-field textarea.valid {
     border-bottom: 1px solid #26a69a;
     box-shadow: 0 1px 0 0 #26a69a;
+}
+
+footer {
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
 }
